@@ -2,7 +2,36 @@ body {
   background-color: #220000;
 }
 
-/* Navigation */
+/* Including custom fonts so that even Linux/Android displays
+   webpage using Times New Roman */
+@font-face {
+    font-family: 'TNR';
+    src: url(font/times.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TNR';
+    src: url(font/timesbd.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TNR';
+    src: url(font/timesi.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'TNR';
+    src: url(font/timesbi.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+* {
+    font-family: 'TNR';
+  }
 
 li {
   color: yellow;
