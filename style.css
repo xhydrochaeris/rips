@@ -8,6 +8,10 @@ body {
   animation: diagScroll 30s linear infinite;
 }
 
+html, body, a, a.hover {
+cursor: url("wooper.png"), auto;
+}
+
 /* Including custom fonts so that even Linux/Android displays
    webpage using Times New Roman */
 @font-face {
