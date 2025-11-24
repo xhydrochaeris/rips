@@ -65,7 +65,10 @@ a{
 color: rgb(0, 255, 170);
 }
 a:hover{
-background-color: #ff9634;
+background: linear-gradient(
+    #ff9634,
+    #e63a24
+  );;
 color: purple;
 }
 header{
@@ -127,20 +130,20 @@ padding-right: 20px;
     text-decoration: underline;
 }
 .rainbow_text_animated {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background: linear-gradient(to right, yellow, #0099ff , #00ff00, #ff3399, yellow);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 12s ease-in-out infinite;
+    animation: rainbow_animation 12s linear infinite;
     background-size: 20% 100%;
 }
 
 @keyframes rainbow_animation {
-    0%,100% {
+    0% {
         background-position: 0 0;
     }
 
-    50% {
+    100% {
         background-position: 100% 0;
     }
 }
@@ -168,7 +171,7 @@ padding-right: 20px;
     #6666ff
   );
   background-size: 20% 100%;
-  animation: rainbow_animation 12s ease-in-out infinite;
+  animation: rainbow_animation 12s linear infinite;
 
   z-index: -1;
 
@@ -190,14 +193,14 @@ header a:hover::before {
 
   background: linear-gradient(
     to right,
-    #6666ff,
+    rgb(0, 255, 170),
     #0099ff,
     #00ff00,
     #ff3399,
-    #6666ff
+    rgb(0, 255, 170)
   );
   background-size: 60% 100%;
-  animation: rainbow_animation 12s ease-in-out infinite;
+  animation: rainbow_animation 12s linear infinite;
 
   z-index: 0;
 
