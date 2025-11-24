@@ -12,6 +12,11 @@ html, body, a, a.hover {
 cursor: url("wooper.png"), auto;
 }
 
+::selection {
+    background-color: #8b0000;
+    color: #fff;
+}
+
 /* Including custom fonts so that even Linux/Android displays
    webpage using Times New Roman */
 @font-face {
@@ -57,10 +62,10 @@ p {
   color: yellow;
 }
 a{
-color: green;
+color: rgb(0, 255, 170);
 }
 a:hover{
-background-color: orange;
+background-color: #ff9634;
 color: purple;
 }
 header{
