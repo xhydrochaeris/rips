@@ -5,7 +5,7 @@ body {
   background-size: auto;
   background-size: 64px 64px;
   background-attachment: fixed;
-  animation: diagScroll 30s linear infinite;
+  animation: diagScroll 6s linear infinite;
 }
 
 html, body, a, a.hover {
@@ -214,6 +214,6 @@ header a:hover::before {
     background-position: 0 0;
   }
   to {
-    background-position: -500px -500px; /* moves up-left */
+    background-position: -64px -128px; /* moves up-left */
   }
 }
