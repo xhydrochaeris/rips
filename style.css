@@ -105,24 +105,30 @@ padding-right: 20px;
   border-radius: 6px;
 }
 
-/* Wrap text + image */
 .content-wrapper {
     display: flex;
-    position: relative;
-    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 30px;
 }
 
-/* Left column text (70% width) */
 .left-column {
-    width: 80%;
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
-/* Image anchored top-right */
+.right-column {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Start image collapsed; JS will scale it */
 .right-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;     /* adjust as needed */
+    width: 0;
+    height: 0;
+    display: block;
 }
 
 /*https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css*/

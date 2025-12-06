@@ -39,8 +39,10 @@
 <p>More information: <a href="https://vk.gy/releases/eyes-mirrorge/20525/symmetry/" target="_blank">vk.gy</a></p>
 
     </div>
-
+<div class="right-column">
     <img class="right-image" src="https://i.imgur.com/lUzJqek.jpeg">
+</div>
+    
 </div>
 
 <div class="content-wrapper">
@@ -70,8 +72,56 @@
 <p>More information: <a href="https://vk.gy/releases/eyes-mirrorge/27317/a-ei-voice/" target="_blank">vk.gy</a></p>
 
     </div>
-
-    <img class="right-image" src="https://i.imgur.com/YFKl3wa.png">
+<div class="right-column">
+    <img class="right-image" src="https://ptpimg.me/k664vv.jpg">
 </div>
+    
+</div>
+
+<script>
+function scaleImages() {
+    document.querySelectorAll('.content-wrapper').forEach(wrapper => {
+        const left = wrapper.querySelector('.left-column');
+        const img = wrapper.querySelector('.right-image');
+
+        if (!left || !img) return;
+
+        // Ensure image has loaded
+        if (!img.complete) {
+            img.onload = () => scaleImages();
+            return;
+        }
+
+        const leftHeight = left.offsetHeight;
+        const maxWidth = wrapper.offsetWidth * 0.3; // 30% of wrapper width
+
+        const naturalRatio = img.naturalWidth / img.naturalHeight;
+
+        // Compute maximum width based on height constraint
+        let widthBasedOnHeight = leftHeight * naturalRatio;
+
+        // Take the smaller of width-based-on-height and max allowed width
+        let finalWidth = Math.min(maxWidth, widthBasedOnHeight);
+        let finalHeight = finalWidth / naturalRatio;
+
+        // Apply the final sizes
+        img.style.width = finalWidth + 'px';
+        img.style.height = finalHeight + 'px';
+        
+        // After computing finalWidth and finalHeight
+        const rightCol = wrapper.querySelector('.right-column');
+        const leftHeight2 = left.offsetHeight;
+
+        const topOffset = (leftHeight2 - finalHeight) / 2;
+        img.style.marginTop = topOffset + 'px';
+    });
+}
+
+// Run after page load
+window.addEventListener('load', scaleImages);
+
+// Optional: re-scale on window resize
+window.addEventListener('resize', scaleImages);
+</script>
 
 </body>
